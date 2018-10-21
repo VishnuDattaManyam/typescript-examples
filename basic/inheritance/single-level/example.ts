@@ -45,6 +45,6 @@ export class Vehicle {
     }
 }
 
-export class Car {
+export class Car extends Vehicle{
     wheels: number = 4;
 }

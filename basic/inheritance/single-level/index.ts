@@ -24,3 +24,12 @@ console.log(vehicle1.status());
 console.log(vehicle1.stop());
 
 console.log(vehicle1.stop());
+
+var swift = new Car('Red', 'Swift Dezire', 750000);
+
+swift.start();
+swift.run(10);
+swift.run(55);
+console.log(swift.status());
+swift.stop();
+console.log(swift.status());
