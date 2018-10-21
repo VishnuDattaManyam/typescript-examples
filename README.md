@@ -8,3 +8,8 @@ tsc --init
 
 
 #How to transpile Type Script files to Plain Javascript:
+
+npm install fuse-box typescript uglify-es uglify-js --save-dev
+
+
+node fuse
