@@ -13,38 +13,38 @@ export class Vehicle {
 
     start(): string {
         if (this.isStarted) {
-            return 'Vehicle started already';
+            return `${this.model} started already`;
         }
         this.isStarted = true;
-        return 'Vehicle started successfully';
+        return `${this.model} started successfully`;
     }
     run(speed: number) {
         this.speed = speed;
-        return 'Vehicle took ' + this.speed + ' units per hour speed';
+        return `${this.model} took ${this.speed} units per hour speed`;
     }
     stop(): string {
         if (!this.isStarted) {
-            return 'Vehicle is stopped already';
+            return `${this.model} is stopped already`;
         }
         this.isStarted = false;
         this.speed = 0;
-        return 'Vehicle stopped successfully';
+        return `${this.model} stopped successfully`;
     }
     status() {
-        let status:string;
+        let status: string;
         if (this.isStarted) {
             if (this.speed == 0) {
-                status = 'Vehicle is started and yet to move';
+                status = `${this.model} is started and yet to move`;
             } else {
-                status = 'Vehicle is running @ ' + this.speed + ' units per hour speed';
+                status = `${this.model} is running @ ${this.speed} units per hour speed`;
             }
         } else {
-            status = 'Vehicle is parked';
+            status = `${this.model} is parked`;
         }
         return status;
     }
 }
 
-export class Car extends Vehicle{
+export class Car extends Vehicle {
     wheels: number = 4;
 }
